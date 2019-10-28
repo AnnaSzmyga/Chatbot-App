@@ -1,0 +1,24 @@
+.message {
+    &__wrapper {
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 20px;
+        max-width: 500px;
+        display: inline-block;
+        box-shadow: 4px 4px 8px grey;
+    }
+    &--botMsg {
+        text-align: right;
+    }
+
+    &--userMsg .message__wrapper {
+        background-color: lightblue;
+        border-bottom-left-radius: 0;
+    }
+
+    &--botMsg .message__wrapper {
+        background-color: rgb(188, 231, 188);
+        border-top-right-radius: 0;
+    }
+}
+

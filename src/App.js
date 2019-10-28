@@ -1,10 +1,13 @@
 import React from 'react';
 import MessagesList from './components/MessagesList/MessagesList';
+import MessageBox from './components/MessageBox/MessageBox';
+import './App.scss';
 
 const url = 'https://acobot-brainshop-ai-v1.p.rapidapi.com/get?bid=178&key=sX5A2PcYZbsN5EY6&uid=mashape&msg='
 
 
 class App extends React.Component {
+
   state = {
     inputText: '',
     msgText: '',
@@ -21,7 +24,6 @@ class App extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.addMessage(this.state.inputText, true);
-
     this.setState({ inputText: '' });
     this.runBot(this.state.msgText);
   }
@@ -54,18 +56,11 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="app-container">
         <h1>Talk With Me!</h1>
         <div className="chat-wrapper">
           <MessagesList messages={this.state.messages} />
-          <form onSubmit={this.handleSubmit}>
-            <input
-              placeholder="Talk with me!"
-              type="text"
-              value={this.state.inputText}
-              onChange={this.handleChange}
-            />
-          </form>
+          <MessageBox handleSubmit={this.handleSubmit} handleChange={this.handleChange} inputText={this.state.inputText} />
         </div>
       </div>
     );

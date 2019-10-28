@@ -1,0 +1,18 @@
+.app-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 15px;
+    min-height: 100vh;
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-wrapper {
+    height: calc(100vh - 110px);
+    width: 100%;
+    border: 1px solid red;
+}

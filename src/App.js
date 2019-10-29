@@ -1,5 +1,6 @@
 import React from 'react';
 import Heading from './components/Heading/Heading';
+import Intro from './components/Intro/Intro';
 import MessagesList from './components/MessagesList/MessagesList';
 import MessageBox from './components/MessageBox/MessageBox';
 import './App.scss';
@@ -18,15 +19,17 @@ class App extends React.Component {
   handleChange = (e) => {
     this.setState({
       inputText: e.target.value,
-      msgText: e.target.value.replace(/ /g, '%')
+      msgText: e.target.value.trim().replace(/ /g, '%')
     });
   }
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.addMessage(this.state.inputText, true);
+    if (this.state.msgText !== '') {
+      this.addMessage(this.state.inputText, true);
+      this.runBot(this.state.msgText);
+    }
     this.setState({ inputText: '' });
-    this.runBot(this.state.msgText);
   }
 
   addMessage = (content, userMsg) => {

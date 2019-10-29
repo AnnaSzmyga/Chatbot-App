@@ -11,7 +11,7 @@ function MessageBox({ handleSubmit, handleChange, inputText }) {
                 value={inputText}
                 onChange={handleChange}
             />
-            <button className="submit-btn" type="submit"><i class="far fa-paper-plane"></i></button>
+            <button className="submit-btn" type="submit"><i className="far fa-paper-plane"></i></button>
         </form>
     )
 }

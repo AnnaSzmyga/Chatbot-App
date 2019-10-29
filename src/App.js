@@ -1,4 +1,5 @@
 import React from 'react';
+import Heading from './components/Heading/Heading';
 import MessagesList from './components/MessagesList/MessagesList';
 import MessageBox from './components/MessageBox/MessageBox';
 import './App.scss';
@@ -35,7 +36,6 @@ class App extends React.Component {
   }
 
   runBot = (msgText) => {
-    console.log({msgText});
     fetch(url + msgText, {
       "method": "GET",
       "headers": {
@@ -57,7 +57,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="app-container">
-        <h1>Talk With Me!</h1>
+        <Heading />
         <div className="chat-wrapper">
           <MessagesList messages={this.state.messages} />
           <MessageBox handleSubmit={this.handleSubmit} handleChange={this.handleChange} inputText={this.state.inputText} />

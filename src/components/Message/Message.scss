@@ -12,12 +12,12 @@
     }
 
     &--userMsg .message__wrapper {
-        background-color: lightblue;
+        background-color: #7dd145;
         border-bottom-left-radius: 0;
     }
 
     &--botMsg .message__wrapper {
-        background-color: rgb(188, 231, 188);
+        background-color: #ffa448;
         border-top-right-radius: 0;
     }
 }

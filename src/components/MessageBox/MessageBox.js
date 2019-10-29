@@ -6,11 +6,12 @@ function MessageBox({ handleSubmit, handleChange, inputText }) {
         <form className="message-form" onSubmit={handleSubmit}>
             <input
                 className="message-input"
-                placeholder="Talk with me!"
+                placeholder="Talk to me!"
                 type="text"
                 value={inputText}
                 onChange={handleChange}
             />
+            <button className="submit-btn" type="submit"><i class="far fa-paper-plane"></i></button>
         </form>
     )
 }

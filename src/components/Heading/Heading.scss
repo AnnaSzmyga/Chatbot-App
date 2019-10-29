@@ -1,0 +1,45 @@
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 15px;
+    @media (max-width: 568px) {
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    &__image {
+        width: 100px;
+        height: 100px;
+        margin-right: 20px;;
+        background-size: contain;
+        background-repeat: no-repeat;
+        @media (max-width: 568px) {
+            height: 80px;
+            width: 80px;
+            margin-right: 0;
+        }
+    }
+
+    &__title {
+        color: #666262;
+        text-align: center;
+
+        @media (max-width: 568px) {
+            margin: 0;
+        }
+
+        span {
+            text-shadow: 1px 1px 0 grey;
+        }
+        span:first-of-type {
+            color: #ff0000
+        }
+        span:nth-of-type(2) {
+            color: #7dd145;
+        }
+        span:last-of-type {
+            color: #ffa448;
+        }
+    }
+}

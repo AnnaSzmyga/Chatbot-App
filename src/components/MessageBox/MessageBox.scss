@@ -1,5 +1,5 @@
 .message-form {
-    //width: 100%;
+    position: relative;
 }
 
 .message-input {
@@ -8,4 +8,22 @@
     outline: 0;
     border: 2px solid grey;
     border-radius: 4px;
+}
+
+.submit-btn {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    outline: none;
+
+    .fa-paper-plane {
+        color: #7dd145;
+
+        &:hover {
+            color: darken($color: #7dd145, $amount: 15%)
+        }
+    }
 }

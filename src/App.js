@@ -33,6 +33,9 @@ class App extends React.Component {
     this.setState({
       messages: [...this.state.messages, { content, userMsg }]
     });
+    // keep scroll down when add message
+    const messagesList = document.querySelector('.messages-list');
+    messagesList.scrollTop = messagesList.scrollHeight;
   }
 
   runBot = (msgText) => {

@@ -1,6 +1,5 @@
 import React from 'react';
 import Heading from './components/Heading/Heading';
-import Intro from './components/Intro/Intro';
 import MessagesList from './components/MessagesList/MessagesList';
 import MessageBox from './components/MessageBox/MessageBox';
 import './App.scss';

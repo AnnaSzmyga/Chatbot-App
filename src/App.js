@@ -33,15 +33,16 @@ class App extends React.Component {
 
   addMessage = (content, userMsg) => {
     const delay = userMsg ? 0 : 1000;
-    setTimeout(() => this.setState({
-      messages: [...this.state.messages, { content, userMsg }]
-      }), delay);
-    // this.setState({
-    //   messages: [...this.state.messages, { content, userMsg }]
-    // });
-    // keep scroll down when add message
-    const messagesList = document.querySelector('.messages-list');
-    messagesList.scrollTop = messagesList.scrollHeight;
+    setTimeout(() => {
+      this.setState({
+        messages: [...this.state.messages, { content, userMsg }]
+        })
+      // keep scroll down when add message
+      const messagesList = document.querySelector('.messages-list');
+      messagesList.scrollTop = messagesList.scrollHeight;
+    }, delay);
+
+
   }
 
   getBotAnswer = (msgText) => {

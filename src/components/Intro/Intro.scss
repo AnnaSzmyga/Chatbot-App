@@ -52,34 +52,39 @@
     }
 
     &__item {
+        animation-duration: 1.5s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+
         &:first-of-type {
-            animation: fadeInDown 1.5s;
+            animation-name: fadeInDown;
             font-size: larger;
             color: #ffa448;
             text-shadow: 1px 1px 0 grey;
             font-weight: 700;
         }
         &:nth-of-type(2) {
-            animation: fadeInRight 1.5s;
+            animation-name: fageInRight;
         }
         &:nth-of-type(3) {
-            animation: fadeInLeft 1.5s;
+            animation-name: fadeInLeft;
         }
         &:nth-of-type(4) {
-            animation: fadeInDown 1.5s;
+            animation-name: fadeInDown;
             font-size: larger;
             color: #7dd145;
             text-shadow: 1px 1px 0 grey;
             font-weight: 700;
         }
         &:nth-of-type(5) {
-            animation: fadeInRight 1.5s;
+            animation-name: fadeInRight;
         }
         &:nth-of-type(6) {
-            animation: fadeInLeft 1.5s;
+            animation-name: fadeInLeft;
         }
         &:nth-of-type(7) {
-            animation: fadeInUp 1.5s;
+            animation-name: fadeInUp;
             font-size: larger;
             color: #ff0000;
             text-shadow: 1px 1px 0 grey;

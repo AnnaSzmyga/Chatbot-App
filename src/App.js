@@ -4,7 +4,7 @@ import MessagesList from './components/MessagesList/MessagesList';
 import MessageBox from './components/MessageBox/MessageBox';
 import './App.scss';
 
- const url = 'https://acobot-brainshop-ai-v1.p.rapidapi.com/get?bid=178&key=sX5A2PcYZbsN5EY6&uid=mashape&msg=';
+const url = 'https://acobot-brainshop-ai-v1.p.rapidapi.com/get?bid=178&key=sX5A2PcYZbsN5EY6&uid=mashape&msg=';
 
 
 class App extends React.Component {
@@ -24,11 +24,11 @@ class App extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    if (this.state.msgText !== '') {
+    if (this.state.msgText) {
       this.addMessage(this.state.inputText, true);
       this.getBotAnswer(this.state.msgText);
     }
-    this.setState({ inputText: '' });
+    this.setState({ inputText: '', msgText: '' });
   }
 
   addMessage = (content, userMsg) => {
@@ -57,7 +57,7 @@ class App extends React.Component {
       return response.json();
     })
     .then(response => {
-        this.addMessage(response.cnt, false);
+      this.addMessage(response.cnt, false);
     })
     .catch(err => {
       console.log(err);

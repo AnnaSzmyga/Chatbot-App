@@ -5,9 +5,15 @@
 .message-input {
     width: 100%;
     padding: 10px;
+    padding-right: 40px;
     outline: 0;
-    border: 2px solid grey;
+    border: 1px solid grey;
     border-radius: 4px;
+    line-height: 1.6rem;
+
+    &:focus {
+        border-width: 2px;
+    }
 }
 
 .submit-btn {
